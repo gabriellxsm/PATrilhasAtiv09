@@ -1,0 +1,29 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        string[] nomes = new string[5];
+        double[,] notas = new double[5, 2];
+        
+        for (int i = 0; i < 5; i++)
+        {
+            Console.Write("Digite o nome do aluno {0}: ", i + 1);
+            nomes[i] = Console.ReadLine();
+
+            Console.Write("Digite a primeira nota de {0}: ", nomes[i]);
+            notas[i, 0] = double.Parse(Console.ReadLine());
+
+            Console.Write("Digite a segunda nota de {0}: ", nomes[i]);
+            notas[i, 1] = double.Parse(Console.ReadLine());
+        }
+
+        Console.WriteLine("\nListagem de alunos, notas e médias:");
+        for (int i = 0; i < 5; i++)
+        {
+            double media = (notas[i, 0] + notas[i, 1]) / 2;
+            Console.WriteLine("Nome: {0}, Nota 1: {1}, Nota 2: {2}, Média: {3}", nomes[i], notas[i, 0], notas[i, 1], media);
+        }
+    }
+}
