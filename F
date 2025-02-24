@@ -1,0 +1,23 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int[] vetor1 = { 1, 2, 3, 4, 5 };
+        int[] vetor2 = { 5, 4, 3, 2, 1 };
+        int[] soma = new int[5];
+
+        for (int i = 0; i < 5; i++)
+        {
+            soma[i] = vetor1[i] + vetor2[i];
+        }
+
+        Console.WriteLine("Vetor soma:");
+        foreach (int valor in soma)
+        {
+            Console.WriteLine(valor);
+        }
+    }
+}
+
